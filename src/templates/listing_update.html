@@ -1,8 +1,11 @@
-<form method="POST">
+{% extends 'base.html' %}
 
+{% block content %}
+    
+<h1 class="text-4xl text-gray-90">Update listing</h1>
+<form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
-
-
-</form>    
+</form>
+{% endblock content %}    
